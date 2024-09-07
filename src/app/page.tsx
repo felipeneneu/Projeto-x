@@ -1,6 +1,9 @@
 import About from "./_components/about";
+import FaqSection from "./_components/faq";
 import FeatureSection from "./_components/feature";
 import { IntroSection } from "./_components/intro-section";
+import Investimento from "./_components/investimento";
+
 
 export default function Home() {
   return (
@@ -9,13 +12,11 @@ export default function Home() {
       <IntroSection />
       <About />
       <FeatureSection />
+      <Investimento />
+      <FaqSection />
 
-      <section id="investment">
-        <h1 className="text-primary">Investment</h1>
-      </section>
-      <section id="faq">
-        <h1 className="text-primary">Faq</h1>
-      </section>
+
+
       </main>
 
 

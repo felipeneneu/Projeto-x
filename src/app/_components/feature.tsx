@@ -1,4 +1,6 @@
+import { Components } from "@/components/components";
 import { Info } from "@/components/informativo";
+import { React } from "@/components/react";
 import {
   Accordion,
   AccordionContent,
@@ -12,19 +14,44 @@ function FeatureSection() {
     <section id="features" className="md:w-full mt-8  m-auto bg-slate-50 dark:bg-transparent container space-y-6 py-8 md:py-12 lg:py-24">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-8 text-center">
         <h2 className="text-heading  leading-[1.1] sm:text-3xl md:text-6xl text-secondary-foreground font-bold">
-          Tech Stack
+          Nossas Stack
         </h2>
         <p className="m-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-          Venha desenvolver comigo um projeto real, do zero, usando a melhor Stack do mercado.
+          Usando a melhor Stack do mercado.
         </p>
       </div>
-      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-        <Info />
-        <Info />
-        <Info />
-        <Info />
-      </div>
 
+      {/* GRID ICONS STACKS */}
+
+      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"> 
+        <Info />
+        <React />
+        <Components />
+        <Info />
+
+      </div>
+      <div className="mx-auto text-center md:max-w-[58rem]">
+        <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7 mb-4">
+          Utilizando Next.js 14 e as melhores tecnologias do mercado. Veja o conteúdo abaixo...
+        </p>
+        <Accordion type="single" collapsible className="w-[80%] m-auto md:w-full md:m-0">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Next.js</AccordionTrigger>
+            <AccordionContent className="text-left">
+              Next. js é um framework para quem usa React e quer dar um passo adiante. Ele é como um kit avançado para construir sites e aplicações web.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-2">
+            <AccordionTrigger >React</AccordionTrigger>
+            <AccordionContent className="text-left">
+              O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+            </AccordionContent>
+          </AccordionItem>
+
+
+        </Accordion>
+      </div>
 
     </section>
   )
