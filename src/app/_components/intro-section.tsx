@@ -39,12 +39,6 @@ export function IntroSection() {
         </div>
           </div>
 
-          <div className="grid-cols-2">
-
-            <div>
-
-            </div>
-          </div>
         </div>
 
 
