@@ -9,9 +9,11 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import {
@@ -34,7 +36,7 @@ const formScheme = z.object({
   phoneNumber: z.string().min(15, { message: 'Telefone não é valido' }).refine(
     (value) => {
       // Aqui você pode colocar a logica valida de validaçao desejada para o numero de telefone.
-      const regex = /^\(\d{2}\) \d{5}-\d{4}$/;
+      const regex = /(\(\d{2}\)\s)(\d{4,5}\-\d{4})/g
       return regex.test(value)
     }, { message: 'Telefone não é valido' }
   )
@@ -48,15 +50,19 @@ function PreEnrollment() {
     defaultValues: {
       name: '',
       email: '',
-      phoneNumber: '',
-    }
+
+    },
   });
 
   const [isCompleted, setCompleted] = useState(false);
 
-  const onSubmit = async (value: z.infer<typeof formScheme>) => {
+  const onSubmit = async (values: z.infer<typeof formScheme>) => {
     setCompleted(true);
-    await saveLead({ name: values.name, email: values.email, phoneNumber: values.phoneNumber });
+    await saveLead({
+      name: values.name,
+      email: values.email,
+      phoneNumber: values.phoneNumber,
+    });
   };
 
   return (
@@ -74,16 +80,30 @@ function PreEnrollment() {
           isCompleted ? (
             <>
               <DialogHeader>
-                <DialogTitle>Parabéns!</DialogTitle>
+                <DialogTitle>Parabéns! 🎉</DialogTitle>
                 <DialogDescription>
-                  Suas informações foram enviadas para lista de espera. Aguarde que entraremos em contato.
+                  <p>
+                    Suas informações foram enviadas para lista de espera. Aguarde
+                    que entraremos em contato.
+                  </p>
+                  <p>
+                    Entre para o grupo no WhatsApp clicando{' '}
+                    <a
+                      className='text-bold text-primary underline'
+                      target='_blank'
+                      href='https://chat.whatsapp.com/JCHTqEeRVJm3MRFUIW2IDp'
+                    >
+                      aqui
+                    </a>{' '}
+                    para receber novidades sobre o curso.
+                  </p>
                 </DialogDescription>
               </DialogHeader>
               <DialogClose>
                 <Button variant='outline' onClick={() => {
                   setCompleted(false);
                   form.reset();
-                }}></Button>
+                }}>Fechar</Button>
               </DialogClose>
             </>
           ) : (
@@ -105,6 +125,7 @@ function PreEnrollment() {
                         <FormControl>
                           <Input placeholder='Nome...' {...field} />
                         </FormControl>
+                        <FormMessage />
                       </FormItem>
                     )}
                   />
@@ -117,6 +138,7 @@ function PreEnrollment() {
                         <FormControl>
                           <Input placeholder='Seu email...' {...field} />
                         </FormControl>
+                        <FormMessage />
                       </FormItem>
                     )}
                   />
@@ -130,11 +152,12 @@ function PreEnrollment() {
                         <FormLabel>Celular</FormLabel>
                         <FormControl>
                           <InputMask
-                            className='flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-md'
-                            mask='(00) 00000-0000'
+                            className='flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50'
+                            mask='(99) 99999-9999'
                             placeholder='(00) 00000-0000'
                             {...field} />
                         </FormControl>
+                        <FormMessage />
                       </FormItem>
                     )}
                   />
@@ -142,14 +165,7 @@ function PreEnrollment() {
                 </form>
 
                 </Form>
-                <DialogClose>
-                  <Button variant='outline' onClick={() => {
-                    setCompleted(false);
-                    form.reset();
-                  }}>
 
-                </Button>
-              </DialogClose>
             </>
           )
         }
