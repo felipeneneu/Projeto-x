@@ -83,15 +83,15 @@ function PreEnrollment() {
                 <DialogTitle>Parabéns! 🎉</DialogTitle>
                 <DialogDescription>
                   <p>
-                    Suas informações foram enviadas para lista de espera. Aguarde
+                    Suas informações foram enviadas para Voe Alto Web-Sites. Aguarde
                     que entraremos em contato.
                   </p>
                   <p>
-                    Entre para o grupo no WhatsApp clicando{' '}
+                    se preferir, entre em contato diretamente pelos canais abaixo:{' '}
                     <a
                       className='text-bold text-primary underline'
                       target='_blank'
-                      href='https://chat.whatsapp.com/JCHTqEeRVJm3MRFUIW2IDp'
+                      href='https://wa.me/5514991293993?text=Ol%C3%A1%2C+estou+interessado+em+seus+servi%C3%A7os'
                     >
                       aqui
                     </a>{' '}
@@ -109,9 +109,9 @@ function PreEnrollment() {
           ) : (
             <>
               <DialogHeader>
-                <DialogTitle>Entrar para lista de espera</DialogTitle>
+                  <DialogTitle>Entre em Contato</DialogTitle>
                 <DialogDescription>
-                  informe aqui seus dados
+                    Gostou do que viu e quer saber mais? Estamos aqui para ajudar a transformar sua presença online! Informe seus dados no formulário abaixo, e entraremos em contato o mais breve possível.
                 </DialogDescription>
               </DialogHeader>
               <Form {...form}>
@@ -138,7 +138,9 @@ function PreEnrollment() {
                         <FormControl>
                           <Input placeholder='Seu email...' {...field} />
                         </FormControl>
+
                         <FormMessage />
+
                       </FormItem>
                     )}
                   />
@@ -158,6 +160,7 @@ function PreEnrollment() {
                             {...field} />
                         </FormControl>
                         <FormMessage />
+                        <br />Estamos ansiosos para ajudar sua empresa a voar alto no mundo digital!
                       </FormItem>
                     )}
                   />

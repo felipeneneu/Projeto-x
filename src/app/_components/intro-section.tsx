@@ -6,7 +6,7 @@ import Image from "next/image"
 export function IntroSection() {
   return (
     <section id="intro" className="space-y-6 py-8 md:py-12 lg:py-32 relative w-[20rem] m-auto md:w-full">
-      <svg viewBox="0 0 1024 1024" className="absolute left-1/4 top-full md:left-1/2 md:top-1/2 -z-10 h-[16rem] w-[16rem] 
+      <svg viewBox="0 0 1024 1024" className="absolute m-auto mt-[40rem] md:-top-[10%] -z-10 h-[20rem] w-[20rem] 
     md:h-[54rem] md:w-[54rem]
      -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
         <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />

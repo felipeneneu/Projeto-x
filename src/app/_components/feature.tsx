@@ -11,10 +11,10 @@ import {
 
 function FeatureSection() {
   return (
-    <section id="features" className="md:w-full mt-8  m-auto bg-slate-50 dark:bg-transparent container space-y-6 py-8 md:py-12 lg:py-24">
+    <section id="features" className="w-[22rem] md:w-full mt-8  m-auto bg-slate-50 dark:bg-transparent container space-y-6 py-8 md:py-12 lg:py-24">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-8 text-center">
         <h2 className="text-heading  leading-[1.1] sm:text-3xl md:text-6xl text-secondary-foreground font-bold">
-          Nossas Stack
+          Nossa Stack
         </h2>
         <p className="m-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           Usando a melhor Stack do mercado.
@@ -27,7 +27,7 @@ function FeatureSection() {
         <Info />
         <React />
         <Components />
-        <Info />
+
 
       </div>
       <div className="mx-auto text-center md:max-w-[58rem]">
@@ -38,17 +38,23 @@ function FeatureSection() {
           <AccordionItem value="item-1">
             <AccordionTrigger>Next.js</AccordionTrigger>
             <AccordionContent className="text-left">
-              Next. js é um framework para quem usa React e quer dar um passo adiante. Ele é como um kit avançado para construir sites e aplicações web.
+              <li>Next. js é um framework para quem usa React e quer dar um passo adiante. Ele é como um kit avançado para construir sites e aplicações web.</li>
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-2">
             <AccordionTrigger >React</AccordionTrigger>
             <AccordionContent className="text-left">
-              O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+              <li>O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.</li>
             </AccordionContent>
           </AccordionItem>
 
+          <AccordionItem value="item-2">
+            <AccordionTrigger >TailwindCSS.</AccordionTrigger>
+            <AccordionContent className="text-left">
+              <li>O Tailwind CSS, segundo o próprio site da web é um "framework CSS visando a utilidade", que fornece várias dessas classes utilitárias, opinativas e de propósito único, que você pode usar diretamente dentro de sua marcação de texto para projetar um elemento.</li>
+            </AccordionContent>
+          </AccordionItem>
 
         </Accordion>
       </div>

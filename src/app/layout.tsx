@@ -17,8 +17,8 @@ const fontHeading = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "The Next Dev",
-  description: "Curso Next Js 14",
+  title: "Voe Alto Web",
+  description: "Desenvolvemos sites profissionais, responsivos e otimizados para SEO com Next.js, React e Tailwind CSS. Foco em performance, design moderno e experiência do usuário (UI/UX). Transforme sua presença online com soluções web de alta qualidade.",
   keywords: ['Next.js',
     'Next.js 14',
     'React.js',
@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     'Voe Alto Design',
     'Javascript',
     'Typescript',
-    'Tailwind'
+    'Tailwind',
+    'Desenvolvimento de sites,',
+    'Criação de sites',
+    'sites com Next.js',
+    'Desenvolvimento front-end,'
   ]
 };
 

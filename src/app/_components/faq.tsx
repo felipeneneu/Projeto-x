@@ -15,41 +15,69 @@ function FaqSection() {
       </div>
 
 
-      <div className="mx-auto text-center md:max-w-[58rem]">
+      <div className="mx-auto text-center md:max-w-[58rem] relative">
+
         <Accordion type="single" collapsible className="w-[80%] m-auto md:w-full md:m-0">
 
           <AccordionItem value="item-1">
-            <AccordionTrigger>Como comprar o curso?
+            <AccordionTrigger>Pesquisa e Planejamento de UI/UX:
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              Se estiver no período de matrículas abertas, basta clicar no botão Matricular que você será redirecionado para uma página de compras da Hotmart. Feito isso, você poderá realizar as aulas através da própria plataforma da Hotmart. Você receberar informações de quando as aulas estarão disponíveis.
-              Caso o período de matrículas esteja encerrado, você poderá clicar no botão Lista de Espera e preencher o formulário para ser avisado quando as matrículas forem reabertas.
+
+              <li>Pesquisa de mercado e análise de concorrência.</li>
+              <li>Criação de wireframes e protótipos.</li>
+              <li>Design centrado no usuário, com foco na experiência de navegação (UX).</li>
+
+
+
+
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger>Para quem é este curso?
+            <AccordionTrigger>Design de Interface (UI):
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              Para quem possui conhecimentos básicos de HTML, CSS e JavaScript <br />
-              Para quem quer aprender desenvolver uma aplicação do zero <br />
-              Para quem quer estar atualizado com os conhecimentos que as grandes empresas procuram
+              <li>Desenvolvimento de uma interface visual personalizada e responsiva.</li>
+              <li>Criação de layouts atraentes e otimizados para dispositivos móveis e desktops.</li>
+              <li>Prototipagem interativa para aprovação do cliente.</li>
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-3">
-            <AccordionTrigger>Por quanto tempo terei acesso ao curso?
+            <AccordionTrigger>Desenvolvimento com Next.js:
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              Você terá 1 ano após a data da compra.
+              <li> Criação de páginas utilizando renderização estática (SSG) e/ou renderização do lado do servidor (SSR) para otimização de SEO.</li>
+              <li>Integração com APIs para exibição de dados dinâmicos.</li>
+              <li>Uso das melhores práticas de performance e otimização de carregamento.</li>
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-4">
-            <AccordionTrigger>Lorem ipsum dolor?
+            <AccordionTrigger>Otimização de SEO e Performance:
             </AccordionTrigger>
             <AccordionContent className="text-left">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt itaque porro ea vero adipisci ipsa. Voluptatibus neque laborum maxime sit odio provident amet pariatur facilis fugit, corporis id dignissimos soluta!
+              <li>Implementação de práticas avançadas de SEO para melhor ranqueamento em motores de busca.</li>
+              <li>Otimização de tempo de carregamento e performance em todas as páginas.</li>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-5">
+            <AccordionTrigger>Responsividade Total:
+            </AccordionTrigger>
+            <AccordionContent className="text-left">
+              <li>Garantia de que o site funcione perfeitamente em todos os dispositivos (mobile, tablet, desktop).</li>
+              <li>Testes em navegadores e plataformas para compatibilidade.</li>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-6">
+            <AccordionTrigger>Suporte e Manutenção Inicial:
+            </AccordionTrigger>
+            <AccordionContent className="text-left">
+              <li>Suporte técnico durante a fase de implementação e 30 dias após a entrega.</li>
+              <li>Treinamento básico para gerenciamento de conteúdo (se aplicável).</li>
             </AccordionContent>
           </AccordionItem>
 
