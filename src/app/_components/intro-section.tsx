@@ -3,6 +3,7 @@ import { ModeToggle } from "./mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image"
 
+
 export function IntroSection() {
   return (
     <section id="intro" className="space-y-6 py-8 md:py-12 lg:py-32 relative w-[20rem] m-auto md:w-full">
