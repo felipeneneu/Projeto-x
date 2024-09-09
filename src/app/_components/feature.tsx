@@ -52,7 +52,7 @@ function FeatureSection() {
           <AccordionItem value="item-2">
             <AccordionTrigger >TailwindCSS.</AccordionTrigger>
             <AccordionContent className="text-left">
-              <li>O Tailwind CSS, segundo o próprio site da web é um "framework CSS visando a utilidade", que fornece várias dessas classes utilitárias, opinativas e de propósito único, que você pode usar diretamente dentro de sua marcação de texto para projetar um elemento.</li>
+              <li>O Tailwind CSS, segundo o próprio site da web é um &quot;framework CSS visando a utilidade&quot;, que fornece várias dessas classes utilitárias, opinativas e de propósito único, que você pode usar diretamente dentro de sua marcação de texto para projetar um elemento.</li>
             </AccordionContent>
           </AccordionItem>
 

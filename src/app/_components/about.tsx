@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -6,6 +7,8 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/social-icons'
+
+
 
 function SocialLink({ icon: Icon, ...props }: any) {
   return (
