@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { ThemeProvider } from "./_components/theme-provider";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -51,6 +53,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         {children}
+          <SpeedInsights />
           <Analytics />
         </ThemeProvider>
 
